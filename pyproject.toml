@@ -20,6 +20,7 @@ dependencies = [
 #  "kaitaistruct>=0.11",
   "kaitaistruct @ {home:uri}/git/kaitai_struct/runtime/python",
   "flask>=3",
+  "flask_cors>=4",
 ]
 
 [project.optional-dependencies]
