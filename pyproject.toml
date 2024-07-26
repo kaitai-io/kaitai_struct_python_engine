@@ -1,0 +1,33 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "kaitai_struct_python_engine"
+version = "0.1"
+authors = [
+  { name="Mikhail Yakshin", email="greycat@kaitai.io" },
+]
+description = "Kaitai Struct engine: a web service that allows interactive exploration of binaries"
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+#  "kaitaistruct>=0.11",
+  "kaitaistruct @ {home:uri}/git/kaitai_struct/runtime/python",
+  "flask>=3",
+]
+
+[project.optional-dependencies]
+tests = ["pytest>=8"]
+
+[project.urls]
+Homepage = "https://github.com/kaitai-io/kaitai_struct_python_engine"
+Issues = "https://github.com/kaitai-io/kaitai_struct_python_engine/issues"
+
+[tool.hatch.metadata]
+allow-direct-references = true
