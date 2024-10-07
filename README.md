@@ -25,4 +25,10 @@ python3 -m pip install -e ./
 
 # Run server
 python3 -m kaitai_struct_python_engine
+
+# Restore dependencies + `[tests]` suffix allows to install optional dependencies for running tests
+python3 -m pip install -e ./[tests]
+
+# Run tests
+pytest
 ```
